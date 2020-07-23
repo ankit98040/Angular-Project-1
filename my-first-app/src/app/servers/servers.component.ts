@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
+/*@Component({
   //selector: '[app-servers]', this is treated as an attribute
   selector: `.app-servers`,
   //treated as a class
@@ -9,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
   <h3 >hello guys</h3>
   <app-server style="font-family: fantasy;"></app-server>`,
   styleUrls: ['./servers.component.css']
+})*/
+
+@Component({
+  selector:'app-servers',
+  templateUrl:'./servers.component.html'
+
 })
-export class ServersComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class ServersComponent {
+  serverId:number= 10;
+  serverStatus:string= 'offline';
 
 }
