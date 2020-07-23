@@ -16,8 +16,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl:'./servers.component.html'
 
 })
-export class ServersComponent {
+export class ServersComponent implements OnInit {
   serverId:number= 10;
   serverStatus:string= 'offline';
+  allowNewServer=false;
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServer=true;
+    }, 2000)
+   }
+  ngOnInit(){
 
+  }
 }
